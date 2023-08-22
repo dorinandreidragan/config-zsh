@@ -1,5 +1,8 @@
 set -e
 
+echo "Instal zsh"
+sudo apt install -y zsh
+
 echo "Install oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -8,6 +11,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 echo "Fish like auto-suggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo "Copy the custom theme for p10k"
 cp .p10k.zsh ~/.p10k.zsh
 
 echo "Copy the profile"
